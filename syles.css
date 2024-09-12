@@ -1,35 +1,11 @@
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  height: 100vh;
-  margin: 0;
-  background-color: beige;
-}
-.container {
-  overflow: hidden;
+  background-color: bisque;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* Position input form on the page using flexbox. */
-#input-form {
-  height: 2em;
-  border: 2px solid;
+form {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  margin-top: 2em;
-}
-
-#input-form input {
-  border: 1px solid black;
-  border-radius: 10px;
-  background-color: aquamarine;
-  color: white;
-}
-
-#add-task {
-  margin-left: 5px;
-}
-.task-list {
-  /* display: none; */
-  max-height: 100%;
 }
