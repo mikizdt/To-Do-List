@@ -1,4 +1,4 @@
-1.Create user input and 'add task button';
+1.Create user input and 'add task button'.
 
 2.CSS styling: 
   Position input form on the page using flexbox.
