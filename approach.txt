@@ -1,18 +1,8 @@
-1.Create user input and 'add task button'.
+1.HTML, create heading(h1), create form with input=text
+and submit button -- this will be wrapped in a div#container so i
+can target later in CSS to center and make child elements responsive.
 
-2.CSS styling: 
-  Position input form on the page using flexbox.
-  Style input form, buttons and task lists.
-  Add scroll bar for task elements.
+2.CSS, center everything (using flexbox), add scrollbar for the 
+task-container. 
 
-3.Add JS logic to create, edit and delete tasks:
-  Add click event listener to 'add task button' to create and display
-new <li></li> with a edit and delete button and a checkbox on the
-left side to mark as task done(use line-trough as style).
-  Add click event listener to 'edit button' to edit target task
-using the 'this' keyword. 
-  Add click event listener to 'delete button' to delete target task element
-using the 'this' keyword.
-  
-
-
+3.JS.
