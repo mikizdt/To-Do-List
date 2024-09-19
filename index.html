@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="syles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
     <title>To Do App</title>
   </head>
   <body>
@@ -13,23 +18,38 @@
         <input type="text" placeholder="Enter task..." />
         <button type="submit">&plus;</button>
       </form>
-      <div class="task-container">
-        <div class="task">task</div>
-        <div class="task">task</div>
-        <div class="task">task</div>
-        <div class="task">task</div>
-        <div class="task">task</div>
-        <div class="task">task</div>
-        <div class="task">task</div>
-        <div class="task">task</div>
-        <div class="task">task</div>
-        <div class="task">task</div>
-        <div class="task">task</div>
-        <div class="task">task</div>
-        <div class="task">task</div>
-        <div class="task">task</div>
-        <div class="task">task</div>
+      <div id="task-container">
+        <!-- <template id="taskTemplate"> -->
+        <div class="task">
+          <input title="checkbox" type="checkbox" class="task-completed" />
+          <input type="text" class="task-display" placeholder="Task..." />
+          <button title="delete" type="button" class="delete">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+        <div class="task">
+          <input title="checkbox" type="checkbox" class="task-completed" />
+          <input type="text" class="task-display" placeholder="Task..." />
+          <button title="delete" type="button" class="delete">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+        <div class="task">
+          <input title="checkbox" type="checkbox" class="task-completed" />
+          <input type="text" class="task-display" placeholder="Task..." />
+          <button title="delete" type="button" class="delete">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+        <div class="task">
+          <input title="checkbox" type="checkbox" class="task-completed" />
+          <input type="text" class="task-display" placeholder="Task..." />
+          <button title="delete" type="button" class="delete">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
       </div>
+      <!-- </template> -->
     </div>
 
     <script src="main.js"></script>
