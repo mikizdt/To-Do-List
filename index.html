@@ -15,14 +15,23 @@
     <h1>To Do List</h1>
     <div id="container">
       <form action="">
-        <input type="text" placeholder="Enter task..." />
-        <button type="submit">&plus;</button>
+        <input type="text" id="userInput" placeholder="Enter task..." />
+        <button id="addBtn" type="submit">&plus;</button>
       </form>
       <div id="task-container">
-        <template id="taskTemplate">
         <div class="task">
-          <input title="checkbox" type="checkbox" class="task-completed" />
-          <input type="text" class="task-display" placeholder="Task..." />
+          <input
+            title="checkbox"
+            type="checkbox"
+            id="checkbox"
+            class="task-completed"
+          />
+          <input
+            type="text"
+            class="task-display"
+            id="task"
+            placeholder="Task..."
+          />
           <button title="delete" type="button" class="delete">
             <i class="fas fa-trash"></i>
           </button>
@@ -49,7 +58,6 @@
           </button>
         </div>
       </div>
-      </template>
     </div>
 
     <script src="main.js"></script>

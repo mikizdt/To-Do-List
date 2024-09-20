@@ -78,6 +78,7 @@ form button:hover {
 #task-container button:hover {
   color: white;
   background-color: red;
+  cursor: pointer;
   transition: 0.5s ease;
 }
 
@@ -87,7 +88,7 @@ form button:hover {
   margin-bottom: 10px;
 }
 
-/* target checkbox */
+/* target siblings */
 .task-completed:checked + .task-display {
   background: gray;
   text-decoration: line-through;
