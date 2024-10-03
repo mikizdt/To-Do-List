@@ -1,11 +1,11 @@
 // variables
-const addButton = document.getElementById("add-btn");
+const form = document.querySelector("form");
 const userInput = document.getElementById("userInput");
 const taskContainer = document.getElementById("task-container");
 
 // Function to add a new task
 function addTask(event) {
-  event.preventDefault(); // Prevents the form from submitting and refreshing the page
+  event.preventDefault(); // Prevents form from submitting and refreshing the page
 
   const taskText = userInput.value.trim();
 
@@ -14,11 +14,10 @@ function addTask(event) {
     const taskDiv = document.createElement("div");
     taskDiv.classList.add("task");
 
-    const radioBtn = document.createElement("input");
-    radioBtn.setAttribute("type", "radio");
-    radioBtn.classList.add("done-btn");
+    const checkbox = document.createElement("input");
+    checkbox.setAttribute("type", "checkbox");
+    checkbox.classList.add("done-btn");
 
-    // Create a new span to hold the task text
     const taskSpan = document.createElement("span");
     taskSpan.innerText = taskText;
 
@@ -26,7 +25,7 @@ function addTask(event) {
     deleteBtn.classList.add("delete-btn");
     deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
 
-    taskDiv.appendChild(radioBtn);
+    taskDiv.appendChild(checkbox);
     taskDiv.appendChild(taskSpan);
     taskDiv.appendChild(deleteBtn);
 
@@ -35,13 +34,18 @@ function addTask(event) {
     // Clear the input field after adding the task
     userInput.value = "";
 
+    // Delete Task with animation
     deleteBtn.addEventListener("click", function () {
-      taskContainer.removeChild(taskDiv);
+      taskDiv.classList.add("task-removal");
+      setTimeout(() => taskContainer.removeChild(taskDiv), 300); // Wait for animation to complete
     });
-    radioBtn.addEventListener("click", function () {
+
+    // Mark Task as Completed
+    checkbox.addEventListener("click", function () {
       taskSpan.classList.toggle("completed");
     });
   }
 }
 
-addButton.addEventListener("click", addTask);
+// Add the event listener to the form's submit event
+form.addEventListener("submit", addTask);

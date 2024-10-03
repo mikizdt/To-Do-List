@@ -1,11 +1,18 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-image: url(image.jpg);
   background-size: cover;
-  background-position: center; /* Centers the image */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
+  background-position: center;
+  background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
   font-family: Arial, sans-serif;
+  overflow: hidden;
 }
 
 h1 {
@@ -21,6 +28,12 @@ h1 {
 form {
   display: flex;
   justify-content: space-between;
+  margin-top: -30px;
+}
+
+form > * {
+  border-radius: 10px;
+  border: none;
 }
 
 #userInput {
@@ -40,8 +53,9 @@ form {
 
 #task-container {
   margin-top: 20px;
-  overflow-y: auto;
-  max-height: 100vh;
+  max-height: 300px; /* Set the max height for the scrollable area */
+  overflow-y: scroll; /* Allows vertical scrolling when content overflows */
+  padding-right: 10px; /* Add padding for better spacing */
 }
 
 .task {
@@ -53,6 +67,7 @@ form {
   border: 1px solid #ddd;
   border-radius: 5px;
   background-color: #f9f9f9;
+  animation: slideIn 0.3s ease forwards; /* Apply slide-in animation */
 }
 
 .done-btn {
@@ -63,6 +78,7 @@ form {
 .task span {
   flex-grow: 1;
   margin-right: 10px;
+  transition: text-decoration 0.3s, color 0.3s; /* Smooth transition for completion */
 }
 
 .task .delete-btn {
@@ -79,4 +95,29 @@ form {
 .completed {
   text-decoration: line-through;
   color: gray;
+  transition: color 0.3s ease-in, text-decoration 0.3s ease-in;
+}
+
+/* Task addition animation */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Task removal animation */
+@keyframes slideOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
 }
